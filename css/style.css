@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
+/* *----------------------------------------------------------------------- */
+/* *-------------------------- ROOT/CONTAINER ----------------------------- */
+/* *----------------------------------------------------------------------- */
 :root {
   --bShadow: rgba(0, 0, 0, 0.2);
   --bShadow2: rgba(0, 0, 0, 0.19);
   --cyan: #5f9ea0;
   --red: #ff6347;
   --red2: #ff634740;
-  --background: #000;
 }
 
 * {
@@ -15,33 +17,40 @@
   box-sizing: border-box;
   font-family: "Josefin Sans", sans-serif;
   color: #fff;
+  transition: 0.2s ease-out;
+  -webkit-transition: 0.2s;
 }
 
 body {
   display: grid;
-  background-color: var(--background);
-  height: fit-content;
+  grid-template-rows: auto 1fr auto;
+  background-color: #070707;
+  height: 100%;
+  margin: 0;
 }
 
 .hero {
   box-shadow: 0 4px 8px 0 var(--bShadow), 0 6px 20px 0 var(--bShadow2);
-  /* background-image: url(../assets/images/background.jpg); */
+  background-image: url(/assets/images/background2.png);
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 
 .container {
-  width: 80vw;
-  height: 100%;
-  margin: 0 auto 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 0 auto 0 auto;
+  height: 100%;
+  min-height: fit-content;
+  width: 80vw;
 }
 
-/* -- Header -- */
+/* *----------------------------------------------------------------------- */
+/* *-------------------------- HEADER ------------------------------------- */
+/* *----------------------------------------------------------------------- */
 header {
   display: flex;
   flex-wrap: wrap;
@@ -53,7 +62,7 @@ header {
   gap: 2em;
 }
 
-.name {
+.logo {
   display: flex;
   justify-content: center;
   text-shadow: 4px 6px 8px var(--bShadow);
@@ -74,7 +83,9 @@ header {
   display: none;
 }
 
-/* -- Navbar -- */
+/* *----------------------------------------------------------------------- */
+/* *-------------------------- NAVBAR ------------------------------------- */
+/* *----------------------------------------------------------------------- */
 nav {
   display: flex;
   justify-content: center;
@@ -90,12 +101,13 @@ nav {
   align-items: center;
   justify-content: start;
   list-style: none;
-  gap: 2em;
+  gap: 0.8em;
 }
 
 .nav-list-item a {
   backdrop-filter: blur(4px);
   box-shadow: 0 4px 8px 0 var(--bShadow), 0 6px 20px 0 var(--bShadow2);
+  text-shadow: 4px 6px 8px var(--bShadow);
   background: rgba(95, 158, 160, 0.65);
   font-family: "Roboto Mono", monospace;
   border-radius: 2em;
@@ -147,23 +159,33 @@ nav {
   color: #fff;
 }
 
-/* -- Content -- */
+/* *----------------------------------------------------------------------- */
+/* *-------------------------- CONTENT ------------------------------------ */
+/* *----------------------------------------------------------------------- */
 .content {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
-  gap: 1em;
   margin-top: auto 0 auto 0;
-  padding: 4em;
+  gap: 1em;
+  padding: 1em;
 }
 
-.content h1 {
+section {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+section h1 {
+  text-shadow: 4px 6px 8px var(--bShadow);
   color: #fff;
   font-size: 4rem;
 }
-.content h4 {
+section h4 {
+  text-shadow: 4px 6px 8px var(--bShadow);
   color: var(--cyan);
   display: block;
   letter-spacing: 1px;
@@ -171,8 +193,33 @@ nav {
   font-size: 2rem;
   padding-bottom: 40px;
 }
+section p {
+  text-shadow: 4px 6px 8px var(--bShadow);
+  font-size: 2rem;
+  padding: 1em;
+  max-width: 30em;
+}
 
-/* -- Stats List -- */
+.content figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  width: 1em;
+  z-index: -1;
+  flex-grow: 1;
+  min-width: 30%;
+}
+
+.content figure img {
+  max-width: 100%;
+  aspect-ratio: initial;
+  object-fit: cover;
+}
+
+/* *----------------------------------------------------------------------- */
+/* *-------------------------- STATS LIST --------------------------------- */
+/* *----------------------------------------------------------------------- */
 .stats-list {
   backdrop-filter: blur(4px);
   box-shadow: 0 4px 8px 0 var(--bShadow), 0 6px 20px 0 var(--bShadow2);
@@ -187,7 +234,7 @@ nav {
   margin-top: 60px;
   gap: 4em;
   width: 100%;
-  padding: 2em;
+  padding: 1em;
 }
 
 .stats-list strong {
@@ -204,14 +251,17 @@ nav {
   font-size: 1em;
 }
 
-/* -- Link List -- */
+/* *----------------------------------------------------------------------- */
+/* *-------------------------- LINK LIST ---------------------------------- */
+/* *----------------------------------------------------------------------- */
 .link-container {
   height: fit-content;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-  margin-bottom: 2em;
+  margin: 2em 0;
+  padding: 1em;
 }
 
 .link-list {
@@ -227,36 +277,32 @@ nav {
 
 .link-list-item {
   backdrop-filter: blur(4px);
-  box-shadow: 0 4px 8px 0 var(--bShadow), 0 6px 20px 0 var(--bShadow2);
   background: rgba(95, 158, 160, 0.65);
-  font-family: "Roboto Mono", monospace;
-  border-radius: 2em;
+  border-radius: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: fit-content;
-  min-height: 8em;
+  padding: 1em;
+  gap: 1em;
 }
 
 .link-list-item a {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   text-decoration: none;
   font-family: "Roboto Mono", monospace;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 2em;
   color: #fff;
-  padding: 1em;
-  margin: auto;
 }
 
 .link-list img {
-  width: 2em;
+  width: 4em;
   height: auto;
   aspect-ratio: initial;
   filter: brightness(0) invert(1);
-  margin-right: 1em;
 }
 
 .link-list a :hover {
@@ -276,7 +322,68 @@ nav {
   -webkit-transition: 0.4s;
 }
 
-/* -- Footer -- */
+/* *----------------------------------------------------------------------- */
+/* *-------------------------- SKILL LIST --------------------------------- */
+/* *----------------------------------------------------------------------- */
+.skill-container {
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 2em 0;
+}
+
+.skill-list {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.skill-list-item {
+  backdrop-filter: blur(4px);
+  background: rgba(95, 158, 160, 0.65);
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: fit-content;
+}
+
+.skill-list img {
+  width: 6em;
+  height: auto;
+  aspect-ratio: initial;
+  filter: brightness(0) invert(1);
+  padding: 1em;
+}
+
+.skill-list img:hover {
+  transition: 0.4s ease-in-out;
+  -webkit-transition: 0.4s;
+  filter: brightness(100%) invert(0);
+  filter: drop-shadow(4px 4px 1px var(--bShadow2));
+}
+
+.skill-list li:hover {
+  transition: 0.4s ease-in-out;
+  -webkit-transition: 0.4s;
+  background: var(--red2);
+}
+
+.skill-list li:not(hover) {
+  transition: 0.4s ease-in-out;
+  -webkit-transition: 0.4s;
+}
+
+/* *----------------------------------------------------------------------- */
+/* *-------------------------- FOOTER ------------------------------------- */
+/* *----------------------------------------------------------------------- */
 footer {
   background-color: var(--cyan);
   color: #fff;
@@ -288,341 +395,41 @@ footer {
   text-decoration: none;
   text-align: center;
   font-size: 1.25em;
-  height: fit-content;
+  height: 100%;
   padding: 1em;
-  margin-top: auto;
 }
 
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-/* ----- MEDIA CONTAINERS ----- */
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
+/* *----------------------------------------------------------------------- */
+/* *----------------------------------------------------------------------- */
+/* *----------------------------------------------------------------------- */
+/* *------------------------- MEDIA CONTAINERS ---------------------------- */
+/* *----------------------------------------------------------------------- */
+/* *----------------------------------------------------------------------- */
+/* *----------------------------------------------------------------------- */
 
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-/* ----- BASIC MOBILE ----- */
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-@media only screen and (min-width: 320px) and (max-width: 479px) {
+/* *----------------------------------------------------------------------- */
+/* *----------------------------------------------------------------------- */
+/* *------------------------- MOBILE/TABLET ------------------------------- */
+/* *----------------------------------------------------------------------- */
+/* *----------------------------------------------------------------------- */
+@media only screen and (min-width: 320px) and (max-width: 979px) {
   .hero {
-    height: fit-content;
+    background-image: none;
   }
 
   .container {
+    transition: 0.4s ease-in-out;
+    -webkit-transition: 0.4s;
     width: 100vw;
+    min-height: fit-content;
   }
 
   .content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     padding: 0;
-    padding-top: 1em;
-  }
-
-  header {
-    justify-content: space-between;
-    font-size: small;
-    padding: 1em 2em;
-    gap: 0;
-  }
-
-  nav {
-    max-height: 0px;
-    position: sticky;
-    overflow: hidden;
-    padding-right: 0;
-  }
-
-  .nav-list {
-    height: 0px;
-    gap: 1em;
-  }
-
-  .nav-list-item {
-    width: 100%;
-  }
-
-  .nav-list-item a {
-    transition: 0.4s ease-in-out;
-    -webkit-transition: 0.4s;
-    font-weight: 500;
-    font-size: 1.5em;
-    padding: 0.5em 0.75em 0.5em 0.65em;
-    border-radius: 1em;
-    width: 100%;
-  }
-
-  #side-menu:checked ~ nav > .nav-list {
-    transition: 0.4s ease-in-out;
-    -webkit-transition: 0.4s;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    height: fit-content;
-    min-height: 2em;
-    width: 100%;
-    padding-bottom: 1em;
-    margin: 0;
-  }
-
-  #side-menu:checked ~ nav {
-    transition: 0.4s ease-in-out;
-    -webkit-transition: 0.4s;
-    max-height: fit-content;
-    width: 100%;
-  }
-
-  .side-menu {
-    display: none;
-    height: fit-content;
-  }
-
-  .side-menu {
-    display: inline-block;
-    position: fixed;
-    right: 10vw;
-    top: 30px;
-    display: none;
-  }
-
-  .burger {
-    display: flex;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    aspect-ratio: 1/1;
-    background: var(--cyan);
-    color: #fff;
-    border-radius: 1em;
-    padding: 1em;
-  }
-
-  .burger-line {
-    transition: 0.4s ease-in-out;
-    -webkit-transition: 0.4s;
-    background-color: white;
-    position: relative;
-    display: block;
-    height: 3px;
-    width: 24px;
-    margin: auto;
-    border-radius: 1em;
-  }
-
-  .burger-line::before,
-  .burger-line::after {
-    transition: 0.4s ease-in-out;
-    -webkit-transition: 0.4s;
-    background-color: white;
-    position: absolute;
-    display: block;
-    content: "";
-    height: 100%;
-    width: 100%;
-    border-radius: 1em;
-  }
-
-  .burger-line::before {
-    top: 8px;
-  }
-
-  .burger-line::after {
-    top: -8px;
-  }
-
-  /* close-icon */
-  #side-menu:checked ~ .burger .burger-line {
-    background-color: transparent;
-  }
-
-  #side-menu:checked ~ .burger .burger-line::before {
-    transform: rotate(-45deg);
-    top: 0;
-  }
-
-  #side-menu:checked ~ .burger .burger-line::after {
-    transform: rotate(45deg);
-    top: 0;
-  }
-
-  /* - */
-
-  .content h1 {
-    padding-left: 0.5em;
-    font-size: 3em;
-  }
-  .content h4 {
-    padding-left: 0.5em;
-    padding-bottom: 0.5em;
-  }
-
-  .stats-list {
-    transition: 0.4s ease-in-out;
-    -webkit-transition: 0.4s;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    border-radius: 0em;
-    gap: 1em;
-  }
-  .stats-list-item {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    padding: 1em;
-    gap: 1em;
-  }
-}
-
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-/* ----- MOBILE LANDSCAPE ----- */
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  .hero {
-    height: fit-content;
-  }
-
-  .container {
-    width: 100vw;
-  }
-
-  .content {
-    padding: 0;
-  }
-
-  header {
-    justify-content: space-between;
-    font-size: small;
-    padding: 1em 2em;
-  }
-
-  nav {
-    max-height: 0px;
-    position: sticky;
-    overflow: hidden;
-    padding-right: 0;
-    width: 100%;
-  }
-
-  .nav-list {
-    height: 0px;
-    gap: 1em;
-  }
-
-  .nav-list-item {
-    width: 100%;
-  }
-
-  .nav-list-item a {
-    transition: 0.4s ease-in-out;
-    -webkit-transition: 0.4s;
-    font-weight: 500;
-    font-size: 1.5em;
-    padding: 0.5em 0.75em 0.5em 0.65em;
-    border-radius: 1em;
-    width: 100%;
-  }
-
-  #side-menu:checked ~ nav > .nav-list {
-    transition: 0.4s ease-in-out;
-    -webkit-transition: 0.4s;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    height: fit-content;
-    min-height: 2em;
-    width: 100%;
-    padding-bottom: 1em;
-    margin: 0;
-  }
-
-  #side-menu:checked ~ nav {
-    transition: 0.4s ease-in-out;
-    -webkit-transition: 0.4s;
-    max-height: fit-content;
-    width: 100%;
-  }
-
-  .side-menu {
-    display: none;
-    height: fit-content;
-  }
-
-  .side-menu {
-    display: inline-block;
-    position: fixed;
-    right: 10vw;
-    top: 30px;
-    display: none;
-  }
-
-  .burger {
-    display: flex;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    aspect-ratio: 1/1;
-    background: var(--cyan);
-    color: #fff;
-    border-radius: 1em;
-    padding: 1em;
-  }
-
-  .burger-line {
-    transition: 0.4s ease-in-out;
-    -webkit-transition: 0.4s;
-    background-color: white;
-    position: relative;
-    display: block;
-    height: 3px;
-    width: 24px;
-    margin: auto;
-    border-radius: 1em;
-  }
-
-  .burger-line::before,
-  .burger-line::after {
-    transition: 0.4s ease-in-out;
-    -webkit-transition: 0.4s;
-    background-color: white;
-    position: absolute;
-    display: block;
-    content: "";
-    height: 100%;
-    width: 100%;
-    border-radius: 1em;
-  }
-
-  .burger-line::before {
-    top: 8px;
-  }
-
-  .burger-line::after {
-    top: -8px;
-  }
-
-  /* close-icon */
-  #side-menu:checked ~ .burger .burger-line {
-    background-color: transparent;
-  }
-
-  #side-menu:checked ~ .burger .burger-line::before {
-    transform: rotate(-45deg);
-    top: 0;
-  }
-
-  #side-menu:checked ~ .burger .burger-line::after {
-    transform: rotate(45deg);
-    top: 0;
   }
 
   section {
@@ -630,11 +437,22 @@ footer {
   }
 
   .content h1 {
-    padding-left: 0.5em;
+    padding: 0.5em;
     font-size: 3em;
   }
   .content h4 {
-    padding-left: 0.5em;
+    padding: 0.5em;
+    padding-bottom: 0.5em;
+  }
+
+  .content figure {
+    width: 100%;
+  }
+
+  header {
+    justify-content: space-between;
+    font-size: small;
+    padding: 2em 2em 0 2em;
   }
 
   .stats-list {
@@ -646,6 +464,7 @@ footer {
     width: 100%;
     border-radius: 0em;
     gap: 1em;
+    margin-top: 0;
   }
   .stats-list-item {
     display: flex;
@@ -654,31 +473,7 @@ footer {
     width: 100%;
     padding: 1em;
     gap: 1em;
-  }
-}
-
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-/* ----- TABLET ----- */
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  .hero {
-    height: fit-content;
-  }
-
-  .container {
-    width: 100vw;
-  }
-
-  .content {
-    padding: 0;
-  }
-
-  header {
-    justify-content: space-between;
-    font-size: small;
-    padding: 1em 2em;
+    border-radius: 1em;
   }
 
   nav {
@@ -686,6 +481,7 @@ footer {
     position: sticky;
     overflow: hidden;
     padding-right: 0;
+    padding-top: 1em;
     width: 100%;
   }
 
@@ -788,7 +584,6 @@ footer {
     top: -8px;
   }
 
-  /* close-icon */
   #side-menu:checked ~ .burger .burger-line {
     background-color: transparent;
   }
@@ -802,67 +597,116 @@ footer {
     transform: rotate(45deg);
     top: 0;
   }
+}
+
+/* *----------------------------------------------------------------------- */
+/* *----------------------------------------------------------------------- */
+/* *-------------------------- BASIC MOBILE ------------------------------- */
+/* *----------------------------------------------------------------------- */
+/* *----------------------------------------------------------------------- */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
   .content {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
+    padding-top: 1em;
+  }
+
+  header {
+    gap: 0;
+  }
+}
+
+/* *----------------------------------------------------------------------- */
+/* *----------------------------------------------------------------------- */
+/* *------------------------- MOBILE LANDSCAPE ---------------------------- */
+/* *----------------------------------------------------------------------- */
+/* *----------------------------------------------------------------------- */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+/* *----------------------------------------------------------------------- */
+/* *----------------------------------------------------------------------- */
+/* *------------------------- TABLET -------------------------------------- */
+/* *----------------------------------------------------------------------- */
+/* *----------------------------------------------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .hero {
+    background-image: url(/assets/images/background2.png);
+  }
+
+  .content {
     gap: 1em;
     margin-top: auto 0 auto 0;
-    padding: 4em;
+    padding: 2em;
   }
 
-  .content h1 {
-    color: #fff;
-    font-size: 4rem;
-  }
-  .content h4 {
-    color: var(--cyan);
-    display: block;
-    letter-spacing: 1px;
-    font-weight: 500;
-    font-size: 2rem;
-    padding-bottom: 40px;
+  .stats-list {
+    border-radius: 1em;
+    margin-top: 4em;
   }
 }
 
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-/* ----- SMALL DESKTOP ----- */
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-@media only screen and (min-width: 980px) and (max-width: 1023px) {
-  .hero {
-    height: fit-content;
+/* *----------------------------------------------------------------------- */
+/* *----------------------------------------------------------------------- */
+/* *------------------------- SMALL DESKTOP ------------------------------- */
+/* *----------------------------------------------------------------------- */
+/* *----------------------------------------------------------------------- */
+@media only screen and (min-width: 980px) and (max-width: 1024px) {
+  .container {
+    transition: 0.4s ease-in-out;
+    -webkit-transition: 0.4s;
+    width: 90vw;
   }
-
   nav {
     padding-right: 0;
   }
+  .nav-list {
+    gap: 0.8em;
+  }
+  section {
+    width: 100%;
+  }
 }
 
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-/* ----- BASIC DESKTOP ----- */
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-@media only screen and (min-width: 1024px) and (max-width: 1199px) {
-  .hero {
-    height: fit-content;
+/* *----------------------------------------------------------------------- */
+/* *----------------------------------------------------------------------- */
+/* *------------------------- BASIC DESKTOP ------------------------------- */
+/* *----------------------------------------------------------------------- */
+/* *----------------------------------------------------------------------- */
+@media only screen and (min-width: 1025px) and (max-width: 1199px) {
+  .container {
+    transition: 0.4s ease-in-out;
+    -webkit-transition: 0.4s;
+    width: 90vw;
   }
-
   nav {
     padding-right: 0;
   }
+  .nav-list {
+    gap: 0.8em;
+  }
+  section {
+    width: 100%;
+  }
 }
 
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-/* ----- LARGE DESKTOP ----- */
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-@media only screen and (min-width: 1200px) {
+/* *----------------------------------------------------------------------- */
+/* *----------------------------------------------------------------------- */
+/* *------------------------- LARGE DESKTOP ------------------------------- */
+/* *----------------------------------------------------------------------- */
+/* *----------------------------------------------------------------------- */
+@media only screen and (min-width: 1200px) and (max-width: 1499px) {
+  .container {
+    transition: 0.4s ease-in-out;
+    -webkit-transition: 0.4s;
+    width: 90vw;
+  }
+  nav {
+    padding-right: 0;
+  }
+  .nav-list {
+    gap: 0.8em;
+  }
+}
+@media only screen and (min-width: 1400px) {
   nav {
     padding-right: 0;
   }
