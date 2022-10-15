@@ -347,13 +347,12 @@ section:not(hover) {
   width: 100%;
 }
 
-#content-stardew .content-text {}
-
 .stardew-image {
   display: flex;
   flex-grow: 1;
   flex-wrap: wrap;
   padding: 1em;
+  width: fit-content;
 }
 
 #content-stardew figure {
