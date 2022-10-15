@@ -286,6 +286,7 @@ section p span {
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 2em;
+  text-align: center;
   text-shadow: none;
   font-size: 2rem;
   display: flex;
