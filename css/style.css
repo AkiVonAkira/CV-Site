@@ -262,6 +262,7 @@ section:not(hover) {
   max-height: 100%;
   aspect-ratio: initial;
   filter: drop-shadow(4px 4px 1px var(--bShadow));
+  object-fit: cover;
 }
 
 /* *----------------------------------------------------------------------- */
@@ -337,13 +338,22 @@ section:not(hover) {
   flex-grow: 1;
   flex-wrap: wrap;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   gap: 1em;
 }
 
 #content-stardew section h1 {
   width: 100%;
+}
+
+#content-stardew .content-text {}
+
+.stardew-image {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  padding: 1em;
 }
 
 #content-stardew figure {
@@ -354,6 +364,7 @@ section:not(hover) {
   background: rgba(95, 158, 160, 0.65);
   border-radius: 1em;
   padding: 1em;
+  min-height: fit-content;
 }
 
 #content-stardew figure img {
@@ -366,9 +377,10 @@ section:not(hover) {
 .image-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(auto, fit-content);
+  grid-template-rows: repeat(auto, 1fr);
   width: 100%;
   grid-gap: 2em;
+  height: fit-content
 }
 
 .image-grid figure {
@@ -595,7 +607,7 @@ footer {
 
   .content figure {
     width: 100%;
-    max-height: 50vh;
+    /* max-height: 50vh; */
   }
 
   #content-portfolio section {
@@ -604,7 +616,7 @@ footer {
 
   .image-grid {
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 3em;
+    grid-template-columns: row(12, fit-content);
     padding: 1em;
   }
 
