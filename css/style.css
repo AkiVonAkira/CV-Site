@@ -24,7 +24,6 @@
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background-color: #070707;
   height: 100%;
   margin: 0;
 }
