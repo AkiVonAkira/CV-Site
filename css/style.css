@@ -56,7 +56,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: fit-content;
   padding: 1em 0;
   gap: .9em;
@@ -95,7 +95,6 @@ header {
 nav {
   display: flex;
   justify-content: center;
-  text-transform: uppercase;
   height: fit-content;
   width: fit-content;
 }
@@ -172,7 +171,8 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  margin-top: auto 0 auto 0;
+  margin: auto 0 auto 0;
+  padding-top: 4em;
   gap: 1em;
 }
 
@@ -205,8 +205,10 @@ section h4 {
 }
 
 section h1 {
+  font-family: "Dancing Script", cursive;
   color: #fff;
   font-size: 4rem;
+  padding-bottom: .5em;
 }
 
 section p {
@@ -217,6 +219,32 @@ section p {
 
 section p span {
   color: var(--cyan);
+}
+
+section a {
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 8px 0 var(--bShadow), 0 6px 20px 0 var(--bShadow2);
+  background: rgba(95, 158, 160, 0.65);
+  font-family: "Roboto Mono", monospace;
+  text-decoration: none;
+  border-radius: 2em;
+  text-align: center;
+  text-shadow: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: .5rem 1em;
+}
+
+section a:hover {
+  transition: 0.4s ease-in-out;
+  background: var(--red2);
+}
+
+section:not(hover) {
+  transition: 0.4s ease-in-out;
 }
 
 .content figure {
@@ -243,6 +271,10 @@ section p span {
   flex-wrap: nowrap;
 }
 
+#content-aboutme section {
+  flex-grow: 1;
+}
+
 #content-aboutme section p {
   max-width: 40em;
 }
@@ -251,9 +283,25 @@ section p span {
 /* *-------------------------- CONTENT PORTFOLIO -------------------------- */
 /* *----------------------------------------------------------------------- */
 #content-portfolio {
+  padding-bottom: 2em;
+}
+
+#content-portfolio section {
   flex-grow: 1;
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 2em;
+}
+
+#content-portfolio .content-text {
+  justify-content: flex-start;
+}
+
+#content-portfolio figure {
+  flex-grow: 1;
+  padding: 1em;
 }
 
 /* *----------------------------------------------------------------------- */
@@ -263,8 +311,8 @@ section p span {
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
-  gap: 2em;
   padding-bottom: 2em;
+  gap: 2em;
 }
 
 #content-cv section {
@@ -274,39 +322,57 @@ section p span {
   width: 100%;
 }
 
-#content-cv section h1 {
-  padding-bottom: .5em;
+.chas-logo {
+  filter: brightness(0) invert(1);
 }
 
-#content-cv section a {
+/* *----------------------------------------------------------------------- */
+/* *-------------------------- CONTENT STARDEW ---------------------------- */
+/* *----------------------------------------------------------------------- */
+#content-stardew {
+  padding-bottom: 2em;
+}
+
+#content-stardew section {
+  flex-grow: 1;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 1em;
+}
+
+#content-stardew section h1 {
+  width: 100%;
+}
+
+#content-stardew figure {
+  flex-grow: 1;
+  transition: 0.4s ease-in-out;
   backdrop-filter: blur(4px);
   box-shadow: 0 4px 8px 0 var(--bShadow), 0 6px 20px 0 var(--bShadow2);
   background: rgba(95, 158, 160, 0.65);
-  font-family: "Roboto Mono", monospace;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 2em;
-  text-align: center;
-  text-shadow: none;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  padding: .5rem 1em;
+  border-radius: 1em;
+  padding: 1em;
 }
 
-#content-cv section a:hover {
-  transition: 0.4s ease-in-out;
-  background: var(--red2);
+#content-stardew figure img {
+  flex-grow: 1;
 }
 
-#content-cv section:not(hover) {
-  transition: 0.4s ease-in-out;
+/* *----------------------------------------------------------------------- */
+/* *-------------------------- IMAGE GRID --------------------------------- */
+/* *----------------------------------------------------------------------- */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto, fit-content);
+  width: 100%;
+  grid-gap: 2em;
 }
 
-.chas-logo {
-  filter: brightness(0) invert(1);
+.image-grid figure {
+  width: 100%;
 }
 
 /* *----------------------------------------------------------------------- */
@@ -321,9 +387,8 @@ section p span {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   list-style: none;
-  margin-top: 60px;
   gap: 2em;
   width: 100%;
   padding: 1.2em;
@@ -352,8 +417,8 @@ section p span {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin: 2em 0;
-  padding: 2em 0;
+  /* margin: 2em 0; */
+  padding: 1em 0;
 }
 
 #item-list {
@@ -466,7 +531,6 @@ footer {
   text-decoration: none;
   text-align: center;
   font-size: 1.25em;
-  height: 100%;
   padding: 1em;
 }
 
@@ -504,7 +568,6 @@ footer {
   }
 
   header {
-    justify-content: space-between;
     padding: 0 1em;
   }
 
@@ -513,13 +576,12 @@ footer {
   }
 
   .content h1 {
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     font-size: 3em;
   }
 
   .content h4 {
-    padding: 0.5rem;
-    padding-bottom: 1em;
+    font-size: 1.75em;
   }
 
   .content p {
@@ -527,17 +589,23 @@ footer {
     padding: 1em;
   }
 
-  #content-cv section a {
+  .content section a {
     width: 100%;
-  }
-
-  #content-cv section h1 {
-    /* padding-bottom: 0; */
   }
 
   .content figure {
     width: 100%;
     max-height: 50vh;
+  }
+
+  #content-portfolio section {
+    flex-direction: row-reverse;
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3em;
+    padding: 1em;
   }
 
   .stats-list {
@@ -546,7 +614,6 @@ footer {
     width: 100%;
     border-radius: 0em;
     gap: 1em;
-    margin-top: 0;
   }
 
   .stats-list-item {
@@ -701,6 +768,10 @@ footer {
     gap: 0;
   }
 
+  .nav-list-item a {
+    font-size: 1.25em;
+  }
+
   .stats-list {
     transition: 0.4s ease-in-out;
     flex-direction: column;
@@ -740,7 +811,6 @@ footer {
 
   .stats-list {
     border-radius: 1em;
-    margin-top: 4em;
   }
 
   .link-list-item a {
