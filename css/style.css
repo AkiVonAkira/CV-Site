@@ -31,7 +31,7 @@ body {
 
 .hero {
   box-shadow: 0 4px 8px 0 var(--bShadow), 0 6px 20px 0 var(--bShadow2);
-  background-image: url("https://raw.githubusercontent.com/AkiVonAkira/CV-Site/main/img/background.jpg");
+  background-image: url('../img/background.jpg');
   background-position: center;
   background-size: cover;
   min-height: 100vh;
