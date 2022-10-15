@@ -26,13 +26,14 @@ body {
   grid-template-rows: auto 1fr auto;
   height: 100%;
   margin: 0;
+  background-image: url('../img/background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-color: #0f0f0f;
 }
 
 .hero {
   box-shadow: 0 4px 8px 0 var(--bShadow), 0 6px 20px 0 var(--bShadow2);
-  background-image: url('../img/background.jpg');
-  background-position: center;
-  background-size: cover;
   min-height: 100vh;
   width: 100%;
 }
