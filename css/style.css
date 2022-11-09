@@ -609,10 +609,6 @@ footer {
     /* max-height: 50vh; */
   }
 
-  #content-portfolio section {
-    flex-direction: row-reverse;
-  }
-
   .image-grid {
     grid-template-columns: repeat(1, 1fr);
     grid-template-columns: row(12, fit-content);
