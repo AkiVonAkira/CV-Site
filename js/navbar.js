@@ -1,7 +1,7 @@
 const dataRaw = "./data/navbar.json"
 let data;
 
-export async function getNavbarData(container) {
+export async function getNavbarData(container, currentPage) {
     const dataFetch = await fetch(dataRaw)
     if (dataFetch.ok) {
         data = await dataFetch.json();
@@ -30,6 +30,9 @@ export async function getNavbarData(container) {
             navLink.href = link.itemReference;
             navLink.textContent = link.itemDesc;
             navListItemElement.value = link.value;
+            if (link.value == currentPage) {
+                navListItemElement.id = "currentpage"
+            }
         }
     }
 }

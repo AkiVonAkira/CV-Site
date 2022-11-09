@@ -7,7 +7,7 @@ createContainer();
 const dataRaw = "./data/portfolio.json";
 const container = document.querySelector(".container");
 
-getNavbarData(container).then((result) => {
+getNavbarData(container, 2).then((result) => {
     getPageData().then((result) => {
         getfooterData();
     })

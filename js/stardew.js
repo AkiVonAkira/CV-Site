@@ -22,26 +22,23 @@ async function getPageData() {
         content.classList = "content";
         content.id = "content-stardew";
 
-        for (const main of data.main) {
-            const contentSection = content.appendChild(document.createElement('section'));
-            const contentText = contentSection.appendChild(document.createElement('div'));
-            contentText.classList = "content-text";
+        const contentSection = content.appendChild(document.createElement('section'));
+        const contentText = contentSection.appendChild(document.createElement('div'));
+        contentText.classList = "content-text";
 
-            const contentTextH1 = contentText.appendChild(document.createElement('h1'));
-            const contentLink = contentText.appendChild(document.createElement('a'));
-            const contentTextP = contentText.appendChild(document.createElement('p'));
-            contentTextH1.textContent = main.title;
-            contentTextP.innerHTML = `${main.paragraph}`;
-            contentLink.href = main.linkSrc
-            contentLink.textContent = main.link
+        const contentTextH1 = contentText.appendChild(document.createElement('h1'));
+        const contentLink = contentText.appendChild(document.createElement('a'));
+        const contentTextP = contentText.appendChild(document.createElement('p'));
+        contentTextH1.textContent = data.main[0].title;
+        contentTextP.innerHTML = `${data.main[0].paragraph}`;
+        contentLink.href = data.main[0].linkSrc
+        contentLink.textContent = data.main[0].link
 
-            const contentFigure = contentSection.appendChild(document.createElement('figure'));
-            if (main.image) {
-                const figureIMG = contentFigure.appendChild(document.createElement('img'));
-                figureIMG.src = main.image;
-                figureIMG.alt = main.alt;
-            }
-        }
+        const stardewImage = contentSection.appendChild(document.createElement('div'));
+        stardewImage.classList = "stardew-image";
+        const contentFigure = stardewImage.appendChild(document.createElement('figure'));
+        const figureIMG = contentFigure.appendChild(document.createElement('img'));
+        figureIMG.src = data.main[0].image;
 
         for (const list of data.content) {
             const contentSection = content.appendChild(document.createElement('section'));

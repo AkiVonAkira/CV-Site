@@ -7,7 +7,7 @@ createContainer();
 const dataRaw = "./data/cv.json";
 const container = document.querySelector(".container");
 
-getNavbarData(container).then((result) => {
+getNavbarData(container, 3).then((result) => {
     getPageData().then((result) => {
         getfooterData();
     })
