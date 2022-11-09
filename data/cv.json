@@ -1,0 +1,26 @@
+{
+  "source": "cv",
+  "content": [
+    {
+      "time": "September 2022 / Current - Vocational College",
+      "occupation": "Fullstack .NET",
+      "paragraph": "My education at Chas Academy is fairly new but I've already <span>learnt</span> a ton. My understanding of <span>HTML</span> and <span>CSS</span> were basic before but within a few weeks they've expanded drastically.",
+      "link": ".//Chas Academy",
+      "linkSrc": "https://chasacademy.se/",
+      "image": "https://chasacademy.se/wp-content/uploads/2020/12/ca-emblem.svg",
+      "imageWidth": "320",
+      "imageHeight": "320",
+      "imageClass": "chas-logo",
+      "alt": "Chas Academy Logo"
+    },
+    {
+      "time": "August 2018 / June 2021 - High School",
+      "occupation": "Game Development",
+      "paragraph": "My high school education equipped me with in-depth understanding of technical abilities such as <span>C#</span> programming for <span>Unity</span> and <span>Blender 3D</span> modeling. Furthermore, I learned how to adapt to various surroundings and developed my teamwork, communication, groupwork, cooperation, and networking skills.",
+      "name": ".//LBS Kreativa Gymnasiet",
+      "link": "https://www.lbs.se/",
+      "image": "https://www.lbs.se/wp-content/themes/lbs/img/lbs-logo-white2.gif",
+      "alt": "LBS Logo"
+    }
+  ]
+}

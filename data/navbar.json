@@ -1,0 +1,32 @@
+{
+  "source": "navbar",
+  "name": [
+    {
+      "prefix": ".//",
+      "first": "Ilyas",
+      "last": "Kaya"
+    }
+  ],
+  "nav": [
+    {
+      "itemReference": "index.html",
+      "itemDesc": "Home",
+      "value": "0"
+    },
+    {
+      "itemReference": "aboutme.html",
+      "itemDesc": "About Me",
+      "value": "1"
+    },
+    {
+      "itemReference": "portfolio.html",
+      "itemDesc": "Portfolio",
+      "value": "2"
+    },
+    {
+      "itemReference": "cv.html",
+      "itemDesc": "CV",
+      "value": "3"
+    }
+  ]
+}

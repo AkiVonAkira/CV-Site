@@ -1,0 +1,34 @@
+{
+  "source": "aboutme",
+  "content": [
+    {
+      "introduction": "A little about me,",
+      "paragraph": "My name is <span>Ilyas Kaya</span> and I'm 19 years old, born in Stockholm, Sweden. I'm a first year <span>Fullstack .NET</span> student at <span>Chas Academy</span>, learning how to become a better developer. <br> <br> In my free time I play <span>video games</span>, watch movies and stay healthy by going to the gym once or twice a week. <br> <br> My dreams for the future is to work with .NET Development and have some sort of <span>impact</span> to the world. <br> <br> I have always <span>loved</span> computers and technology as a kid, and my love for programming came to when I was studying <span>Game Development</span>, where I enjoyed writing code more than designing worlds. <br> <br> <br> <br> - Below are some languages or software I know.",
+      "image": "img/IMG-20210610-WA0023.png",
+      "alt": "image"
+    }
+  ],
+  "skills": [
+    {
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-plain.svg"
+    },
+    {
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-plain.svg"
+    },
+    {
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
+    },
+    {
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
+    },
+    {
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
+    },
+    {
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
+    },
+    {
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg"
+    }
+  ]
+}
