@@ -693,11 +693,6 @@ footer img {
     /* max-height: 50vh; */
   }
 
-  #content-stardew figure {
-    margin: 1em;
-    padding: 0;
-  }
-
   .stats-list {
     transition: 0.4s ease-in-out;
     flex-direction: row;
