@@ -1,27 +1,21 @@
 {
   "source": "portfolio",
-  "main": [
+  "content": [
     {
       "title": "Stardew Valley Copy",
       "paragraph": "I was never able to finish the project but I am happy with the amount of features I was able to implement in the short time frame I worked on it. <br> Below are some GIF's and Images of the project.",
       "link": "./Portfolio",
       "linkSrc": "portfolio.html",
-      "image": "img/stardew/17.18.15Unity_g1jcWO2hc7.png"
-    }
-  ],
-  "content": [
-    {
-      "title": "GIF Showcases",
-      "paragraph": "Here you can see the character doing various stuff, such as; Breaking wood, tilling land, planting crop, talking to an NPC, showcasing crafting and going to a different zone.",
-      "image": [
-        "img/stardew/08.03.22_P3oNlX32TO.gif",
-        "img/stardew/18.05.57_DBBbdqj0GP.gif",
-        "img/stardew/18.03.54_f0pIIqinY8.gif"
-      ]
+      "image": "img/stardew/17.18.15Unity_g1jcWO2hc7.png",
+      "imageClass": "stardew-image"
     },
     {
-      "title": "Screenshots",
+      "title": "Images",
+      "paragraph": "Here you can see the character doing various stuff, such as; Breaking wood, tilling land, planting crop, talking to an NPC, showcasing crafting and going to a different zone.",
       "image": [
+        "img/stardew/18.05.57_DBBbdqj0GP.gif",
+        "img/stardew/18.03.54_f0pIIqinY8.gif",
+        "img/stardew/08.03.22_P3oNlX32TO.gif",
         "img/stardew/17.18.15Unity_g1jcWO2hc7.png",
         "img/stardew/17.18.16Unity_Bh2Ks1Ayoc.png",
         "img/stardew/17.18.19Unity_s7DluiHdff.png",

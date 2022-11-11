@@ -1,3 +1,13 @@
+:root {
+    --bShadow: rgba(0, 0, 0, 0.2);
+    --bShadow2: rgba(0, 0, 0, 0.19);
+    --bShadow3: rgba(0, 0, 0, 0.45);
+    --cyan: #5f9ea0;
+    --cyan2: #5f9ea0a6;
+    --red: #ff6347;
+    --red2: #ff634740;
+}
+
 iframe {
     display: block;
     margin-left: auto;
@@ -11,15 +21,17 @@ img {
 }
 
 .mySlides {
-    display: none
+    display: none;
+    padding: 1em;
+    max-width: 50vw;
 }
 
 .slideshow-container {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    height: 100%;
     width: 100%;
     position: relative;
     margin: auto;
@@ -31,6 +43,9 @@ img {
     margin: auto;
     justify-content: center;
     flex-direction: row;
+    width: 100%;
+    padding: 1em;
+    gap: 1em;
 }
 
 .prev,
@@ -40,36 +55,34 @@ img {
     justify-content: center;
     cursor: pointer;
     color: white;
-    font-weight: bold;
-    font-size: 18px;
     transition: 0.6s ease;
-    user-select: none;
-    height: 2em;
-    width: 2em;
-}
-
-.next {
-    right: 0;
+    height: 3rem;
+    width: 4rem;
+    background-color: var(--cyan);
 }
 
 .prev:hover,
 .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--red);
 }
 
 .dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    height: 15px;
-    width: 15px;
+    height: 3rem;
+    width: 3rem;
     margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
+    background-color: var(--cyan);
+    border-radius: 1rem;
     transition: background-color 0.6s ease;
+    font-weight: 700;
 }
 
 .active,
 .dot:hover {
-    background-color: #717171;
+    background-color: var(--red);
 }
 
 .fade {
@@ -87,11 +100,12 @@ img {
     }
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (min-width: 320px) and (max-width: 979px) {
+    .dot {
+        display: none;
+    }
 
-    .prev,
-    .next,
-    .text {
-        font-size: 11px
+    .mySlides {
+        max-width: 90vw;
     }
 }

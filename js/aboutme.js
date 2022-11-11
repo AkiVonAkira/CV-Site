@@ -8,7 +8,7 @@ getNavbarData(1).then((result) => {
     })
 });
 
-window.onscroll = function () { stickyHeader() };
+window.onscroll = () => { stickyHeader() };
 
 async function getPageData() {
     const container = document.querySelector(".container");
@@ -35,7 +35,7 @@ async function getPageData() {
         contentTextH4.textContent = data.content[0].introduction;
         contentTextP.innerHTML = `${data.content[0].paragraph}`;
 
-        const skillContainer = container.appendChild(document.createElement('div'));
+        const skillContainer = content.appendChild(document.createElement('div'));
         skillContainer.classList = "skill-container";
         skillContainer.id = "item-container";
 

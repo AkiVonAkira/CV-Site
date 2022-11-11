@@ -8,7 +8,7 @@ getNavbarData(2).then((result) => {
     })
 });
 
-window.onscroll = function () { stickyHeader() };
+window.onscroll = () => { stickyHeader() };
 
 async function getPageData() {
     const container = document.querySelector(".container");

@@ -152,7 +152,7 @@ nav {
 #currentpage>a:hover {
   transition: 0.4s ease-in-out;
   background: var(--red2) !important;
-  color: var(--cyan) !important;
+  color: var(--red) !important;
 }
 
 /* Current page when hovering on others */
@@ -166,7 +166,7 @@ nav {
 .nav-list-item a:hover {
   transition: 0.4s ease-in-out;
   background: var(--red2);
-  color: var(--cyan);
+  color: var(--red);
 }
 
 /* Transition to normal when not hovering */
@@ -211,7 +211,7 @@ section {
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  background-color: var(--red2);
+  /* background-color: var(--red2); */
   border-radius: 2em;
   padding: 1em;
 }
@@ -299,7 +299,7 @@ section:not(hover) {
 /* *-------------------------- CONTENT ABOUT ME --------------------------- */
 /* *----------------------------------------------------------------------- */
 #content-aboutme {
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 #content-aboutme section {
@@ -378,18 +378,15 @@ section:not(hover) {
   display: flex;
   flex-grow: 1;
   flex-wrap: wrap;
-  padding: 1em;
   width: fit-content;
+  box-shadow: 0 4px 8px 0 var(--bShadow), 0 6px 20px 0 var(--bShadow2);
 }
 
 #content-stardew figure {
   flex-grow: 1;
   transition: 0.4s ease-in-out;
   backdrop-filter: blur(4px);
-  box-shadow: 0 4px 8px 0 var(--bShadow), 0 6px 20px 0 var(--bShadow2);
-  background: var(--cyan2);
   border-radius: 1em;
-  padding: 1em;
   min-height: fit-content;
 }
 
@@ -455,8 +452,7 @@ section:not(hover) {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  /* margin: 2em 0; */
-  padding: 1em 0;
+  width: 100%;
 }
 
 #item-list {
@@ -638,7 +634,6 @@ footer img {
   .container {
     transition: 0.4s ease-in-out;
     width: 100vw;
-    min-height: fit-content;
   }
 
   .content {
@@ -654,16 +649,25 @@ footer img {
   }
 
   .sticky {
-    padding: 1 1em;
-    font-size: x-small;
+    padding: 0 2em;
+    font-size: small;
   }
 
   .sticky+.container {
     padding-top: 91px;
   }
 
+  footer {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1em;
+    gap: 3em;
+  }
+
   section {
     width: 100%;
+    padding: 0;
   }
 
   .content h1 {
@@ -689,10 +693,9 @@ footer img {
     /* max-height: 50vh; */
   }
 
-  .image-grid {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-columns: row(12, fit-content);
-    padding: 1em;
+  #content-stardew figure {
+    margin: 1em;
+    padding: 0;
   }
 
   .stats-list {
@@ -771,6 +774,10 @@ footer img {
   .side-menu {
     display: none;
     height: fit-content;
+  }
+
+  .sticky>.burger {
+    background: var(--red);
   }
 
   .burger {
@@ -914,6 +921,10 @@ footer img {
     width: 90vw;
   }
 
+  .sticky {
+    padding-bottom: 1em;
+  }
+
   .nav-list {
     gap: 0.8em;
   }
@@ -932,6 +943,10 @@ footer img {
   .container {
     transition: 0.4s ease-in-out;
     width: 90vw;
+  }
+
+  .sticky {
+    padding-bottom: 1em;
   }
 
   .nav-list {
@@ -954,8 +969,8 @@ footer img {
     width: 90vw;
   }
 
-  header {
-    justify-content: space-between;
+  .sticky {
+    padding-bottom: 1em;
   }
 
   .nav-list {
