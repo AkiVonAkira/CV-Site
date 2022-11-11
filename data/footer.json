@@ -1,0 +1,42 @@
+{
+  "source": "footer",
+  "content": [
+    {
+      "title": "Ilyas Kaya",
+      "info": [
+        {
+          "desc": "© All Right Reserved"
+        }
+      ]
+    },
+    {
+      "title": "Socials:",
+      "info": [
+        {
+          "reference": "https://github.com/AkiVonAkira",
+          "img": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+          "desc": "GitHub"
+        },
+        {
+          "reference": "https://www.linkedin.com/in/ilyas-kaya-504622253/",
+          "img": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg",
+          "desc": "LinkedIn"
+        }
+      ]
+    },
+    {
+      "title": "Contact:",
+      "info": [
+        {
+          "reference": "mailto:ilyaskaya03@hotmail.com",
+          "img": "img/icons/envelope-open-icon.svg",
+          "desc": "ilyaskaya03@hotmail.com"
+        },
+        {
+          "img": "img/icons/calling-icon.svg",
+          "desc": "072 04 06 588"
+        }
+      ]
+    }
+  ]
+}

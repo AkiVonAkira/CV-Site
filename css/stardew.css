@@ -1,0 +1,111 @@
+:root {
+    --bShadow: rgba(0, 0, 0, 0.2);
+    --bShadow2: rgba(0, 0, 0, 0.19);
+    --bShadow3: rgba(0, 0, 0, 0.45);
+    --cyan: #5f9ea0;
+    --cyan2: #5f9ea0a6;
+    --red: #ff6347;
+    --red2: #ff634740;
+}
+
+iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.mySlides {
+    display: none;
+    padding: 1em;
+    max-width: 50vw;
+}
+
+.slideshow-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    margin: auto;
+    gap: 1em;
+}
+
+.dot-container {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 1em;
+    gap: 1em;
+}
+
+.prev,
+.next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    transition: 0.6s ease;
+    height: 3rem;
+    width: 4rem;
+    background-color: var(--cyan);
+}
+
+.prev:hover,
+.next:hover {
+    background-color: var(--red);
+}
+
+.dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 3rem;
+    width: 3rem;
+    margin: 0 2px;
+    background-color: var(--cyan);
+    border-radius: 1rem;
+    transition: background-color 0.6s ease;
+    font-weight: 700;
+}
+
+.active,
+.dot:hover {
+    background-color: var(--red);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 979px) {
+    .dot {
+        display: none;
+    }
+
+    .mySlides {
+        max-width: 90vw;
+    }
+}

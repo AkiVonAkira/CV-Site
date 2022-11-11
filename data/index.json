@@ -1,0 +1,24 @@
+{
+  "source": "index",
+  "content": [
+    {
+      "introduction": "Hello, my name is",
+      "name": "Ilyas Kaya",
+      "occupation": "A Fullstack .NET Student"
+    }
+  ],
+  "stats": [
+    {
+      "itemData": "1+",
+      "itemDesc": "Years of Experience"
+    },
+    {
+      "itemData": "3",
+      "itemDesc": "Projects"
+    },
+    {
+      "itemData": "?",
+      "itemDesc": "Surprises"
+    }
+  ]
+}

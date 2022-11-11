@@ -1,0 +1,30 @@
+{
+  "source": "portfolio",
+  "content": [
+    {
+      "title": "High School Examination",
+      "project": "Stardew Valley Copy",
+      "paragraph": "For my <span>high school examination</span> I chose to make a copy of the popular indie game <span>Stardew Valley</span> inside the game engine <span>Unity</span>. With how big of a game Stardew Valley is I wasn't able to finish or make art for it, however what I did make was most of the <span>core mechanics</span> such as; <br> <br> <strong> Player Inventory, Crafting, Building and Breaking, Simple Combat, Farming, Day-Night Cycle and more. </strong> <br> <br> I had counted over <span>4,000 lines</span> of <span>C# Code</span> at one point.",
+      "link": "More Info",
+      "linkSrc": "stardew.html",
+      "image": "img/stardew-valley-sign.png",
+      "alt": "Stardew Valley Sign Icon"
+    },
+    {
+      "title": "Personal Project",
+      "project": "This CV Site",
+      "paragraph": "<span>No</span> libraries used.",
+      "link": ".//Source Code",
+      "linkSrc": "https://github.com/AkiVonAkira/CV-Site"
+    },
+    {
+      "title": "Personal Project",
+      "project": "Minesweeper",
+      "paragraph": "Classic looking <span>Minesweeper</span> made with JavaScript.",
+      "link": ".//Source Code & Demo",
+      "linkSrc": "https://github.com/AkiVonAkira/JS-minesweeper",
+      "image": "https://w7.pngwing.com/pngs/337/559/png-transparent-minesweeper-computer-icons-bing-maps-video-game-mines-miscellaneous-game-angle-thumbnail.png",
+      "alt": "Original Minesweeper Game Icon"
+    }
+  ]
+}
