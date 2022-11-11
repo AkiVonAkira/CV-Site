@@ -567,25 +567,25 @@ footer {
   padding: 2em;
 }
 
-footer h1 {
+.footer-title h1 {
   font-size: 2em;
   padding: 1rem;
   padding-bottom: 0;
 }
 
-footer ul {
+.footer-list-container ul {
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 
-footer li {
+.footer-list {
   display: flex;
   list-style: none;
   gap: 1em;
 }
 
-footer li a {
+.footer-list-item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -599,16 +599,16 @@ footer li a {
   gap: 1em;
 }
 
-footer li :hover {
+.footer-list :hover {
   transition: 0.4s ease-in-out;
   background-color: var(--red);
 }
 
-footer li :not(hover) {
+.footer-list :not(hover) {
   transition: 0.4s ease-in-out;
 }
 
-footer img {
+.footer-img {
   width: 2rem;
   filter: brightness(0) invert(1);
 }
