@@ -21,11 +21,6 @@ async function getPageData() {
         content.classList = "content";
         content.id = "content-aboutme";
 
-        const contentFigure = content.appendChild(document.createElement('figure'));
-        const figureIMG = contentFigure.appendChild(document.createElement('img'));
-        figureIMG.src = data.content[0].image;
-        figureIMG.alt = data.content[0].alt;
-
         const contentSection = content.appendChild(document.createElement('section'));
         const contentText = contentSection.appendChild(document.createElement('div'));
         contentText.classList = "content-text";
@@ -34,6 +29,11 @@ async function getPageData() {
         const contentTextP = contentText.appendChild(document.createElement('p'));
         contentTextH4.textContent = data.content[0].introduction;
         contentTextP.innerHTML = `${data.content[0].paragraph}`;
+
+        const contentFigure = contentSection.appendChild(document.createElement('figure'));
+        const figureIMG = contentFigure.appendChild(document.createElement('img'));
+        figureIMG.src = data.content[0].image;
+        figureIMG.alt = data.content[0].alt;
 
         const skillContainer = content.appendChild(document.createElement('div'));
         skillContainer.classList = "skill-container";

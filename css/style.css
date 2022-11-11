@@ -298,11 +298,15 @@ section:not(hover) {
 /* *----------------------------------------------------------------------- */
 #content-aboutme {
   flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
 }
 
 #content-aboutme section {
-  flex-grow: 1;
+  flex-shrink: 1;
+  flex-direction: row-reverse;
+  width: 90%;
 }
 
 #content-aboutme section p {
@@ -394,22 +398,6 @@ section:not(hover) {
 }
 
 /* *----------------------------------------------------------------------- */
-/* *-------------------------- IMAGE GRID --------------------------------- */
-/* *----------------------------------------------------------------------- */
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(auto, 1fr);
-  width: 100%;
-  grid-gap: 2em;
-  height: fit-content
-}
-
-.image-grid figure {
-  width: 100%;
-}
-
-/* *----------------------------------------------------------------------- */
 /* *-------------------------- STATS LIST --------------------------------- */
 /* *----------------------------------------------------------------------- */
 .stats-list {
@@ -452,7 +440,7 @@ section:not(hover) {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding-bottom: 2em;
+  padding: 1em;
 }
 
 #item-list {
@@ -535,7 +523,7 @@ section:not(hover) {
 
 .skill-list img {
   width: 100%;
-  height: 5em;
+  height: 4em;
   aspect-ratio: initial;
   filter: brightness(0) invert(1);
   padding: 1em;
@@ -646,6 +634,10 @@ footer {
 
   #content-index {
     padding: 4em 0 0em 0;
+  }
+
+  #content-aboutme section {
+    flex-direction: column-reverse;
   }
 
   header {
@@ -924,6 +916,10 @@ footer {
     width: 90vw;
   }
 
+  header {
+    justify-content: center;
+  }
+
   .sticky {
     padding-bottom: 1em;
   }
@@ -948,6 +944,10 @@ footer {
     width: 90vw;
   }
 
+  header {
+    justify-content: center;
+  }
+
   .sticky {
     padding-bottom: 1em;
   }
@@ -970,6 +970,10 @@ footer {
   .container {
     transition: 0.4s ease-in-out;
     width: 90vw;
+  }
+
+  header {
+    justify-content: center;
   }
 
   .sticky {
