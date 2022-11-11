@@ -1,12 +1,15 @@
 const dataRaw = "./data/navbar.json"
-let data;
 
-export async function getNavbarData(container, currentPage) {
+export async function getNavbarData(currentPage) {
     const dataFetch = await fetch(dataRaw)
     if (dataFetch.ok) {
-        data = await dataFetch.json();
+        const data = await dataFetch.json();
+        const hero = document.querySelector("body").appendChild(document.createElement('div'));
+        hero.classList = "hero";
+        const header = hero.appendChild(document.createElement('header'));
+        const container = hero.appendChild(document.createElement('div'));
+        container.classList = "container";
 
-        const header = container.appendChild(document.createElement('header'));
         const headerH1 = header.appendChild(document.createElement('h1'));
         const input = header.appendChild(document.createElement('input'));
         const label = header.appendChild(document.createElement('label'));

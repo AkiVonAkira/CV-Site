@@ -1,19 +1,18 @@
-import { createContainer } from "./app.js";
 import { getNavbarData } from "./navbar.js";
 import { getfooterData } from "./footer.js";
+import { stickyHeader } from "./app.js";
 
-createContainer();
-
-const dataRaw = "./data/portfolio.json";
-const container = document.querySelector(".container");
-
-getNavbarData(container, 2).then((result) => {
+getNavbarData(2).then((result) => {
     getPageData().then((result) => {
         getfooterData();
     })
 });
 
+window.onscroll = function () { stickyHeader() };
+
 async function getPageData() {
+    const container = document.querySelector(".container");
+    const dataRaw = "./data/portfolio.json";
     const dataFetch = await fetch(dataRaw)
     if (dataFetch.ok) {
         const data = await dataFetch.json();

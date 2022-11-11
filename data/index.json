@@ -20,17 +20,5 @@
       "itemData": "?",
       "itemDesc": "Surprises"
     }
-  ],
-  "links": [
-    {
-      "itemReference": "https://github.com/AkiVonAkira",
-      "itemSrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-      "itemDesc": "GitHub"
-    },
-    {
-      "itemReference": "https://www.linkedin.com/in/ilyas-kaya-504622253/",
-      "itemSrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg",
-      "itemDesc": "LinkedIn"
-    }
   ]
 }

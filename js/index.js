@@ -1,25 +1,25 @@
-import { createContainer } from "./app.js";
 import { getNavbarData } from "./navbar.js";
 import { getfooterData } from "./footer.js";
+import { stickyHeader } from "./app.js";
 
-createContainer();
-
-const dataRaw = "./data/index.json";
-const container = document.querySelector(".container");
-
-getNavbarData(container, 0).then((result) => {
+getNavbarData(0).then((result) => {
     getPageData().then((result) => {
         getfooterData();
     })
 });
 
+window.onscroll = function () { stickyHeader() };
+
 async function getPageData() {
+    const container = document.querySelector(".container");
+    const dataRaw = "./data/index.json";
     const dataFetch = await fetch(dataRaw)
     if (dataFetch.ok) {
         const data = await dataFetch.json();
 
         const content = container.appendChild(document.createElement('div'));
         content.classList = "content";
+        content.id = "content-index";
 
         const contentSection = content.appendChild(document.createElement('section'));
         const contentText = contentSection.appendChild(document.createElement('div'));
@@ -36,19 +36,6 @@ async function getPageData() {
             const statsListItemElement = statsList.appendChild(document.createElement('li'));
             statsListItemElement.classList = "stats-list-item";
             statsListItemElement.innerHTML = `<strong>${stat.itemData}</strong><span>${stat.itemDesc}</span>`;
-        }
-
-        const linkContainer = container.appendChild(document.createElement('div'));
-        linkContainer.classList = "link-container";
-        linkContainer.id = "item-container";
-
-        const linkList = linkContainer.appendChild(document.createElement('ul'));
-        linkList.classList = "link-list";
-        linkList.id = "item-list";
-        for (const link of data.links) {
-            const linkListItemElement = linkList.appendChild(document.createElement('li'));
-            linkListItemElement.classList = "link-list-item";
-            linkListItemElement.innerHTML = `<a href="${link.itemReference}" target="_blank"><img src="${link.itemSrc}"/> ${link.itemDesc}</a>`;
         }
     }
 }
