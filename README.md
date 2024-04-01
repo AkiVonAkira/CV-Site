@@ -1,6 +1,6 @@
 # CV-Site
 
-My CV Website made using Vanilla JS
+My CV Website made badly with poor performance using only Vanilla JS with json inports for *everthing*
 
-GitHub Pages Live Demo:
-https://akivonakira.github.io/CV-Site/
+Live Site:
+https://cv.akivonakira.com
